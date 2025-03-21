@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>小比特的梦想</title>
     <style>
         body {
@@ -10,15 +10,22 @@
             color: #D8BFD8;
             text-align: center;
             font-family: "微软雅黑", sans-serif;
-            overflow: hidden;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
+        }
+        h1, p {
+            font-size: 5vw; /* 适应不同屏幕大小 */
+            padding: 0 10px;
+        }
+        .container {
+            padding: 20px;
         }
         .heart {
             position: fixed;
             left: 50%;
             top: -50px;
-            font-size: 20px;
+            font-size: 5vw;
             animation: fall linear infinite;
             opacity: 0.8;
         }
@@ -29,31 +36,31 @@
     </style>
 </head>
 <body>
-    <h1>Bluix：</h1>
-    <p>这是一个网页，呃甚至都不算是一个网页</p>
-    <p>但对于我来说但这是一个美好的开始</p>
-    <p>等我……</p>
-    <p>等我学完了高数</p>
-    <p>学完了英语</p>
-    <p>学完了MATLAB</p>
-    <p>学完了Python</p>
-    <p>学完了线性代数</p>
-    <p>学完了汇编语言</p>
-    <p>学完了数据结构</p>
-    <p>学完了大学物理</p>
-    <p>写完了物理实验报告</p>
-    <p>通过了期末考试</p>
-    <p>学完了C指针</p>
-    <p>自学了HTML</p>
-    <p>自学了CSS</p>
-    <p>自学了Javascript</p>
-    <p>买来了一个服务器</p>
-    <p>......</p>
-    <p>最后的最后，我就可以做我的博客网站啦！</p>
-    <p>未来可期，加油！</p>
-    <p></p>
-    <p>net606@outlook.com</p>
-
+    <div class="container">
+        <h1>Bluix：</h1>
+        <p>这是一个网页，呃甚至都不算是一个网页</p>
+        <p>但对于我来说但这是一个美好的开始</p>
+        <p>等我……</p>
+        <p>等我学完了高数</p>
+        <p>学完了英语</p>
+        <p>学完了MATLAB</p>
+        <p>学完了Python</p>
+        <p>学完了线性代数</p>
+        <p>学完了汇编语言</p>
+        <p>学完了数据结构</p>
+        <p>学完了大学物理</p>
+        <p>写完了物理实验报告</p>
+        <p>通过了期末考试</p>
+        <p>学完了C指针</p>
+        <p>自学了HTML</p>
+        <p>自学了CSS</p>
+        <p>自学了Javascript</p>
+        <p>买来了一个服务器</p>
+        <p>......</p>
+        <p>最后的最后，我就可以做我的博客网站啦！</p>
+        <p>未来可期，加油！</p>
+        <p>net606@outlook.com</p>
+    </div>
     <script>
         function createHeart() {
             const heart = document.createElement("div");
@@ -62,10 +69,7 @@
             heart.style.left = Math.random() * 100 + "vw";
             heart.style.animationDuration = Math.random() * 3 + 2 + "s";
             document.body.appendChild(heart);
-            
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
+            setTimeout(() => heart.remove(), 5000);
         }
         setInterval(createHeart, 300);
     </script>
