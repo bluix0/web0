@@ -79,7 +79,7 @@
         <p>......</p>
         <p>最后的最后，我就可以做我的博客网站啦！</p>
         <p>未来可期，加油！</p>
-        <p></p>
+        <p>      </p>
         <p>net606@outlook.com</p>
     </div>
     
@@ -88,9 +88,13 @@
             const petal = document.createElement("div");
             petal.innerText = "🌸"; // 樱花花瓣 emoji
             petal.classList.add("petal");
+              
             petal.style.left = Math.random() * 100 + "vw";
             petal.style.animationDuration = Math.random() * 3 + 2 + "s";
             petal.style.setProperty('--direction', Math.random());
+            petal.style.fontSize = Math.random() * 10 + 15 + "px"; // 随机大小
+            petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+              
             document.body.appendChild(petal);
             
             setTimeout(() => {
