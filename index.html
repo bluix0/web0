@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>小比特的梦想</title>
     <link  rel= "apple-touch-icon" 尺寸= "57x57"  href= "/apple-icon-57x57.png" > 
     <link  rel= "apple-touch-icon" 尺寸= "60x60"  href= "/apple-icon-60x60.png" > 
     <link  rel= "apple-touch-icon" 尺寸= "72x72"  href= "/apple-icon-72x72.png" > 
@@ -14,16 +18,15 @@
     <link  rel= "图标" 类型= "image/png" 大小= "32x32"  href= "/favicon-32x32.png" > 
     <link  rel= "图标" 类型= “image/png” 尺寸 = “96x96”  href = “/favicon-96x96.png” > 
     <link  rel = “icon” 类型 = “image/png” 尺寸 = “16x16”  href = “/favicon-16x16.png” > 
-    <link  rel = “manifest”  href = “/manifest.<meta name= "msapplication-TileColor" content= "#ffffff" > <meta name= "msapplication-TileImage" content= "/ms-icon-144x144.png" > <meta name= "theme-color" content= " #ffffff" >  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>小比特的梦想</title>
+    <link  rel = “manifest”  href = “/manifest.<meta name= "msapplication-TileColor" content= "#ffffff" > <meta name= "msapplication-TileImage" content= "/ms-icon-144x144.png" > <meta name= "theme-color" content= " #ffffff" >
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+        
         body {
-            background-color: black;
-            color: #D8BFD8;
+            background-color: rgb(22, 20, 20);
+            color: #d3afd3;
             text-align: center;
-            font-family: "微软雅黑", sans-serif;
+            font-family: 'Ma Shan Zheng', cursive;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -32,7 +35,7 @@
         .content {
             padding: 20px;
         }
-        .heart {
+        .petal {
             position: fixed;
             left: 50%;
             top: -50px;
@@ -41,8 +44,8 @@
             opacity: 0.8;
         }
         @keyframes fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
+            0% { transform: translate(0, 0); opacity: 1; }
+            100% { transform: translate(calc(-50vw + 100vw * var(--direction)), 100vh); opacity: 0; }
         }
     </style>
 </head>
@@ -75,19 +78,20 @@
     </div>
     
     <script>
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.innerText = "❤️";
-            heart.classList.add("heart");
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-            document.body.appendChild(heart);
+        function createPetal() {
+            const petal = document.createElement("div");
+            petal.innerText = "🌸"; // 樱花花瓣 emoji
+            petal.classList.add("petal");
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.animationDuration = Math.random() * 3 + 2 + "s";
+            petal.style.setProperty('--direction', Math.random());
+            document.body.appendChild(petal);
             
             setTimeout(() => {
-                heart.remove();
+                petal.remove();
             }, 5000);
         }
-        setInterval(createHeart, 300);
+        setInterval(createPetal, 300);
     </script>
 </body>
 </html>
