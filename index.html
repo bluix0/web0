@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>Notion-C笔记</title>
+      
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>小比特的梦想</title>
+<link rel="icon" type="image/png" href="/logo.ico/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/logo.ico/favicon.svg" />
+<link rel="shortcut icon" href="/logo.ico/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/logo.ico/apple-touch-icon.png" />
+<link rel="manifest" href="/logo.ico/site.webmanifest" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&display=swap');
+        
+        body {
+            background-color: rgb(22, 20, 20);
+            color: #d3afd3;
+            text-align: center;
+            font-family: 'Ma Shan Zheng', cursive;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        .content {
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #c738eb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'ZCOOL KuaiLe', cursive;
+        }
+        .button:hover {
+            background-color: #1e0a25;
+        }
+        .petal {
+            position: fixed;
+            left: 50%;
+            top: -50px;
+            font-size: 20px;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            0% { transform: translate(0, 0); opacity: 1; }
+            100% { transform: translate(calc(-50vw + 100vw * var(--direction)), 100vh); opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    <iframe src="https://fortunate-crater-bc2.notion.site/ebd/22f462fe11e6807c8873d664ad834aab"
-        width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+    <div class="content">
+        <h1>Bluix：</h1>
+        <p>这是一个网页，呃甚至都不算是一个网页</p>
+        <p>但对于我来说但这是一个美好的开始</p>
+        <p>等我……</p>
+        <p>等我学完了高数</p>
+        <p>学完了英语</p>
+        <p>学完了MATLAB</p>
+        <p>学完了Python</p>
+        <p>学完了线性代数</p>
+        <p>学完了汇编语言</p>
+        <p>学完了数据结构</p>
+        <p>学完了大学物理</p>
+        <p>写完了物理实验报告</p>
+        <p>通过了期末考试</p>
+        <p>学完了C指针</p>
+        <p>自学了HTML</p>
+        <p>自学了CSS</p>
+        <p>自学了Javascript</p>
+        <p>买来了一个服务器</p>
+        <p>......</p>
+        <p>最后的最后，我就可以做我的博客网站啦！</p>
+        <p>未来可期，加油！</p>
+        <p>还有能不能不要热衷于游戏了，太过分了</p>
+        
+        <a href="https://fortunate-crater-bc2.notion.site/C-22f462fe11e6807c8873d664ad834aab" class="button">我的C笔记</a>
+    </div>
+
+    <footer>
+        <p>编辑于 2025.3.21-二月廿二-河南新乡</p>
+        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7542424546463505071a011a1b5b1810">[email&#160;protected]</a></p>
+    </footer>
+
+    <style>
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+            margin-top: 30px;
+        }
+    </style>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function createPetal() {
+            const petal = document.createElement("div");
+            petal.innerText = "🌸"; // 樱花花瓣 emoji
+            petal.classList.add("petal");
+              
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.animationDuration = Math.random() * 3 + 2 + "s";
+            petal.style.setProperty('--direction', Math.random());
+            petal.style.fontSize = Math.random() * 10 + 15 + "px"; // 随机大小
+            petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+              
+            document.body.appendChild(petal);
+            
+            setTimeout(() => {
+                petal.remove();
+            }, 5000);
+        }
+        setInterval(createPetal, 300);
+    </script>
 </body>
 </html>
