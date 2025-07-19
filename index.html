@@ -79,9 +79,11 @@
 </div>
 
 <footer>
-    <p>网站创建于 2025.3.21-二月廿二-河南新乡</p>
     <p><a href="mailto:77033@proton.me">77033@proton.me</a></p>
-    <p>本站已运行 <span id="runtime"></span></p>
+    <p>
+        网站创建于 2025.3.21-二月廿二-河南新乡 |
+        已运行 <span id="runtime"></span>
+    </p>
 </footer>
 
 <style>
@@ -96,7 +98,7 @@
         text-decoration: underline;
     }
     footer a:hover {
-        color: #c738eb; 
+        color: #c738eb;
     }
 </style>
 
@@ -122,7 +124,7 @@
 
     // 运行时间
     function updateRuntime() {
-        const start = new Date('2025-03-20T19:02:40'); // 支付日期
+        const start = new Date('2025-03-20T19:02:40'); // 建站日期
         const now = new Date();
         let diff = now - start;
 
