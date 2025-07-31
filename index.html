@@ -1,62 +1,117 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Bluix</title>
-<link rel="icon" type="image/png" href="/logo.ico/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/logo.ico/favicon.svg" />
-<link rel="shortcut icon" href="/logo.ico/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/logo.ico/apple-touch-icon.png" />
-<link rel="manifest" href="/logo.ico/site.webmanifest" />
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bluix</title>
+
+  <!-- 网站图标 -->
+  <link rel="icon" type="image/png" href="/logo.ico/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/logo.ico/favicon.svg" />
+  <link rel="shortcut icon" href="/logo.ico/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.ico/apple-touch-icon.png" />
+  <link rel="manifest" href="/logo.ico/site.webmanifest" />
+
+  <!-- 字体 -->
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&display=swap');
-    
+
     body {
-        background-color: rgb(22, 20, 20);
-        color: #d3afd3;
-        text-align: center;
-        font-family: 'Ma Shan Zheng', cursive;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        max-width: 100vw;
+      background-color: rgb(22, 20, 20);
+      color: #d3afd3;
+      text-align: center;
+      font-family: 'Ma Shan Zheng', cursive;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      max-width: 100vw;
     }
+
     .content {
-        padding: 20px;
+      padding: 20px;
     }
+
     .button {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 18px;
-        color: #ffffff;
-        background-color: #c738eb;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        font-family: 'ZCOOL KuaiLe', cursive;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: #c738eb;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'ZCOOL KuaiLe', cursive;
     }
+
     .button:hover {
-        background-color: #1e0a25;
+      background-color: #1e0a25;
     }
+
     .petal {
-        position: fixed;
-        left: 50%;
-        top: -50px;
-        font-size: 20px;
-        animation: fall linear infinite;
-        opacity: 0.8;
+      position: fixed;
+      left: 50%;
+      top: -50px;
+      font-size: 20px;
+      animation: fall linear infinite;
+      opacity: 0.8;
     }
+
     @keyframes fall {
-        0% { transform: translate(0, 0); opacity: 1; }
-        100% { transform: translate(calc(-50vw + 100vw * var(--direction)), 100vh); opacity: 0; }
+      0% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(calc(-50vw + 100vw * var(--direction)), 100vh);
+        opacity: 0;
+      }
     }
-</style>
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: gray;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: #d3afd3;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #c738eb;
+    }
+
+    #telegram-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      z-index: 1000;
+    }
+
+    #telegram-icon img {
+      width: 100%;
+      height: 100%;
+      filter: invert(88%) sepia(21%) saturate(419%) hue-rotate(229deg) brightness(103%) contrast(95%);
+      transition: transform 0.2s ease;
+    }
+
+    #telegram-icon:hover img {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 <body>
-<div class="content">
+  <a href="https://t.me/bluix" target="_blank" id="telegram-icon" title="我的Telegram">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram 图标" />
+  </a>
+
+  <div class="content">
     <h1>Bluix：</h1>
     <p>哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
     <p>我期末考试考了全班倒数第六</p>
@@ -72,79 +127,61 @@
     <p>我期末考试考了全班倒数第六</p>
     <p>哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
     <p>我期末考试考了全班倒数第六</p>
-    <p>哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-    <p>我期末考试考了全班倒数第六</p>
-    
-    <a href="https://bluix0.com/c_note/" class="button">我的C笔记</a>
-</div>
 
-<footer>
+    <a href="https://bluix0.com/c_note/" class="button">我的C笔记</a>
+  </div>
+
+  <footer>
     <p><a href="mailto:77033@proton.me">77033@proton.me</a></p>
     <p>
-        网站创建于 2025.3.21-二月廿二-河南新乡 |
-        已运行 <span id="runtime"></span>
+      网站创建于 2025.3.21-二月廿二-河南新乡 |
+      已运行 <span id="runtime"></span>
     </p>
-</footer>
+  </footer>
 
-<style>
-    footer {
-        text-align: center;
-        font-size: 12px;
-        color: gray;
-        margin-top: 30px;
-    }
-    footer a {
-        color: #d3afd3;
-        text-decoration: underline;
-    }
-    footer a:hover {
-        color: #c738eb;
-    }
-</style>
-
-<script>
+  <!-- 樱花花瓣 + 运行时间 JS -->
+  <script>
     function createPetal() {
-        const petal = document.createElement("div");
-        petal.innerText = "🌸"; // 樱花花瓣 emoji
-        petal.classList.add("petal");
-          
-        petal.style.left = Math.random() * 100 + "vw";
-        petal.style.animationDuration = Math.random() * 3 + 2 + "s";
-        petal.style.setProperty('--direction', Math.random());
-        petal.style.fontSize = Math.random() * 10 + 15 + "px"; // 随机大小
-        petal.style.transform = `rotate(${Math.random() * 360}deg)`;
-          
-        document.body.appendChild(petal);
-        
-        setTimeout(() => {
-            petal.remove();
-        }, 5000);
+      const petal = document.createElement("div");
+      petal.innerText = "🌸";
+      petal.classList.add("petal");
+
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = Math.random() * 3 + 2 + "s";
+      petal.style.setProperty('--direction', Math.random());
+      petal.style.fontSize = Math.random() * 10 + 15 + "px";
+      petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+      document.body.appendChild(petal);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 5000);
     }
     setInterval(createPetal, 300);
 
-    // 运行时间
     function updateRuntime() {
-        const start = new Date('2025-03-20T19:02:40'); // 建站日期
-        const now = new Date();
-        let diff = now - start;
+      const start = new Date('2025-03-20T19:02:40');
+      const now = new Date();
+      let diff = now - start;
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        diff -= days * (1000 * 60 * 60 * 24);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= days * (1000 * 60 * 60 * 24);
 
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        diff -= hours * (1000 * 60 * 60);
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      diff -= hours * (1000 * 60 * 60);
 
-        const minutes = Math.floor(diff / (1000 * 60));
-        diff -= minutes * (1000 * 60);
+      const minutes = Math.floor(diff / (1000 * 60));
+      diff -= minutes * (1000 * 60);
 
-        const seconds = Math.floor(diff / 1000);
+      const seconds = Math.floor(diff / 1000);
 
-        document.getElementById('runtime').textContent =
-            `${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
+      document.getElementById('runtime').textContent =
+        `${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
     }
 
     setInterval(updateRuntime, 1000);
     updateRuntime();
-</script>
+  </script>
 </body>
 </html>
